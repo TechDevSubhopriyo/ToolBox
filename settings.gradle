@@ -16,5 +16,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "ToolBoxExample"
 include ':app'
-//include ':ToolBox'
-//include ':ToolBox-ktx'
+include ':ToolBox'
