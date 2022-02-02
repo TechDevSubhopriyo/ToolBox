@@ -26,7 +26,7 @@ Put this code under Project level build.gradle file:
 Put this code under App Level build.gradle file:
 ```
   dependencies {
-	        implementation 'com.github.TechDevSubhopriyo:toolbox:1.0.6'
+	        implementation 'com.github.TechDevSubhopriyo:toolbox:<Current Version>'
 	}
 ```
 
