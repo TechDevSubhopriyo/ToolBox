@@ -1,4 +1,4 @@
-package com.techdevsubhopriyo.toolbox.Geo;
+package com.techdevsubhopriyo.toolbox;
 
 import com.google.android.gms.maps.model.LatLng;
 
