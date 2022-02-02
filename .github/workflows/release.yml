@@ -1,11 +1,16 @@
 name: "tagged-release"
 
+#on:
+#  workflow_run:
+#    workflows: ["android-test"]
+#    types:
+#      - completed
 on:
-  workflow_run:
-    workflows: ["android-test"]
-    types:
-      - completed
-
+  push:
+    branches:
+      - main
+    tags:
+      - "v*"
 jobs:
   tagged-release:
     name: "Tagged Release"
