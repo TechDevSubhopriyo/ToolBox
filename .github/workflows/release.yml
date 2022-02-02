@@ -18,7 +18,7 @@ jobs:
 
     steps:
 
-      - uses: "marvinpinto/1.0.5@latest"
+      - uses: "techdevsubhopriyo/1.0.5@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
