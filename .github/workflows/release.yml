@@ -1,24 +1,26 @@
-name: "tagged-release"
-
-#on:
-#  workflow_run:
-#    workflows: ["android-test"]
-#    types:
-#      - completed
 on:
   push:
-    branches:
-      - main
     tags:
-      - "v*"
+      - 'v*'
+
+name: Create Release
+
 jobs:
-  tagged-release:
-    name: "Tagged Release"
-    runs-on: "ubuntu-latest"
-
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
     steps:
-
-      - uses: "techdevsubhopriyo/1.0.5@latest"
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          body: |
+            Distribution Release
+          draft: false
           prerelease: false
