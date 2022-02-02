@@ -18,7 +18,7 @@ jobs:
 
     steps:
 
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: "marvinpinto/1.0.5@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           prerelease: false
